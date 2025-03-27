@@ -30,9 +30,9 @@ public class Constants
     public const float REBIRTH_CORNER_SCALE_INCREASE = 0.5f;
 
     // Upgrades base cost
-    public const int SPEED_BASE_COST = 2;
+    public const int SPEED_BASE_COST = 5;
     public const int POINTS_BASE_COST = 2;
-    public const int DVD_BASE_COST = 10;
+    public const int DVD_BASE_COST = 20;
     public const int CORNER_SCALE_BASE_COST = 5;
     public const int PERFECT_STREAK_MULTIPLIER_COST = 10;
     public const int TIMED_COMBO_MULTIPLIER_BASE_COST = 15;
