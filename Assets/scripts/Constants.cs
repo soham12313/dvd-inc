@@ -42,7 +42,7 @@ public class Constants
     public const string REBIRTH_DVD_COUNT_NAME = "rebirthDvdCount";
     public const string REBIRTH_POINTS_INCREASE_NAME = "rebirthPointIncrease";
     public const string CORNER_SCALE_NAME = "cornerScale";
-    public const string TIMED_COMBO_MULTIPLIER_NAME = "comboMultiplier";
-    public const string TIMED_COMBO_DURATION_NAME = "comboDuration";
+    public const string TIMED_COMBO_MULTIPLIER_NAME = "timedComboMultiplier";
+    public const string TIMED_COMBO_DURATION_NAME = "timedComboDuration";
 
 }
