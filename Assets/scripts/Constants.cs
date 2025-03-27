@@ -9,7 +9,8 @@ public class Constants
     public const int BASE_POINT_GAIN = 1;
 
     // Combo constants
-    public const float BASE_PERFECT_STREAK_MULTIPLIER= 1;
+    public const int PERFECT_STREAK_NEEDED = 2;
+    public const float BASE_PERFECT_STREAK_MULTIPLIER = 1;
     public const float BASE_TIMED_COMBO_MULTIPLER = 1f;
     public const float BASE_TIMED_COMBO_DURATION = 10f;
 

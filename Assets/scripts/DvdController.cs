@@ -63,12 +63,15 @@ public class DvdController : MonoBehaviour
 
         // Keep the velocity normalized to the base speed
         this.rb.velocity = this.rb.velocity.normalized * (float)movementSpeed;
+
+        this.gameManager.ResetCurrentPerfectStreak();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("CollidePoint"))
         {
+            this.gameManager.IncrementCurrentPerfectStreak();
             this.gameManager.AddPoints();
             this.gameManager.StartCombo();
         }
