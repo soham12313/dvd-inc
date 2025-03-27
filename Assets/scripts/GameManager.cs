@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     private UpgradesShop upgradesShop;
     [SerializeField]
     private Slider comboSlider;
+    [SerializeField]
+    private TextMeshProUGUI comboText;
 
     public float dvdSpeed;
     public float points;
@@ -148,11 +151,12 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseComboMultiplier(float comboMulti)
     {
-        this.comboMultiplier += this.comboMultiplier * comboMulti;
+        this.comboMultiplier += (float) Math.Round(this.comboMultiplier * comboMulti, 2);
 
         if (this.isComboActive)
         {
             this.pointEarner = this.pointEarnerWithoutCombo * this.comboMultiplier;
+            this.comboText.text = this.comboMultiplier + "x";
         }
     }
 
@@ -184,6 +188,7 @@ public class GameManager : MonoBehaviour
                 this.pointEarnerWithoutCombo = this.pointEarner;
                 this.pointEarner = this.pointEarnerWithoutCombo * this.comboMultiplier;
                 this.comboSlider.maxValue = this.comboDuration;
+                this.comboText.text = this.comboMultiplier + "x";
             }
         }
     }
@@ -192,5 +197,6 @@ public class GameManager : MonoBehaviour
     {
         this.isComboActive = false;
         this.pointEarner = this.pointEarnerWithoutCombo;
+        this.comboText.text = "";
     }
 }
