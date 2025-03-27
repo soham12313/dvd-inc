@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public float pointEarnerWithoutCombo;
     public float pointEarner;
     public float cornerScale;
+    public float currentPerfectStreak;
+    public float perfectStreakMultiplier;
     public float timedComboMultiplier;
     public float timedComboDuration;
     public float timedComboCountdownTimer;
@@ -39,6 +41,8 @@ public class GameManager : MonoBehaviour
         this.points = Constants.BASE_POINTS;
         this.pointEarner = Constants.BASE_POINT_GAIN;
         this.cornerScale = Constants.BASE_CORNER_SCALE;
+        this.ResetCurrentPerfectStreak();
+        this.perfectStreakMultiplier = Constants.BASE_PERFECT_STREAK_MULTIPLIER;
         this.timedComboMultiplier = Constants.BASE_TIMED_COMBO_MULTIPLER;
         this.timedComboDuration = Constants.BASE_TIMED_COMBO_DURATION;
 
@@ -71,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     public void AddPoints()
     {
-        this.points += this.pointEarner;
+        this.points += this.currentPerfectStreak >= Constants.PERFECT_STREAK_NEEDED ? this.pointEarner  * this.perfectStreakMultiplier : this.pointEarner;
         this.pointsText.text = this.points + "";
 
         if (this.upgradesShop.gameObject.activeSelf)
@@ -147,6 +151,26 @@ public class GameManager : MonoBehaviour
     public float GetCornerScale()
     {
         return this.cornerScale;
+    }
+    
+    public void ResetCurrentPerfectStreak()
+    {
+        this.currentPerfectStreak = 0;
+    }
+
+    public void IncrementCurrentPerfectStreak()
+    {
+        this.currentPerfectStreak++;
+    }
+
+    public void IncreasePerfectStreakMultiplier(float perfectMulti)
+    {
+        this.perfectStreakMultiplier += (float) Math.Round(this.perfectStreakMultiplier * perfectMulti, 2);
+    }
+
+    public float GetPerfectStreakMultiplier()
+    {
+        return this.perfectStreakMultiplier;
     }
 
     public void IncreaseComboMultiplier(float comboMulti)
