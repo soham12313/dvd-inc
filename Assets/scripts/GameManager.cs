@@ -25,10 +25,10 @@ public class GameManager : MonoBehaviour
     public float pointEarnerWithoutCombo;
     public float pointEarner;
     public float cornerScale;
-    public float comboMultiplier;
-    public float comboDuration;
-    public float comboCountdownTimer;
-    private bool isComboActive;
+    public float timedComboMultiplier;
+    public float timedComboDuration;
+    public float timedComboCountdownTimer;
+    private bool isTimedComboActive;
 
     // Start is called before the first frame update
     void Start()
@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
         this.points = Constants.BASE_POINTS;
         this.pointEarner = Constants.BASE_POINT_GAIN;
         this.cornerScale = Constants.BASE_CORNER_SCALE;
-        this.comboMultiplier = Constants.BASE_COMBO_MULTIPLER;
-        this.comboDuration = Constants.BASE_COMBO_DURATION;
+        this.timedComboMultiplier = Constants.BASE_TIMED_COMBO_MULTIPLER;
+        this.timedComboDuration = Constants.BASE_TIMED_COMBO_DURATION;
 
         for (int i = 0; i < upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
         {
@@ -50,12 +50,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (this.isComboActive)
+        if (this.isTimedComboActive)
         {
-            if (this.comboCountdownTimer < this.comboDuration)
+            if (this.timedComboCountdownTimer < this.timedComboDuration)
             {
-                this.comboCountdownTimer += Time.deltaTime;
-                this.comboSlider.value = this.comboDuration - this.comboCountdownTimer;
+                this.timedComboCountdownTimer += Time.deltaTime;
+                this.comboSlider.value = this.timedComboDuration - this.timedComboCountdownTimer;
             }
             else
             {
@@ -111,10 +111,10 @@ public class GameManager : MonoBehaviour
 
     public void IncreasePointsEarner(float amount)
     {
-        if (this.isComboActive)
+        if (this.isTimedComboActive)
         {
             this.pointEarnerWithoutCombo += amount;
-            this.pointEarner = this.pointEarnerWithoutCombo * this.comboMultiplier;
+            this.pointEarner = this.pointEarnerWithoutCombo * this.timedComboMultiplier;
         }
         else
         {
@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
 
     public float GetPointsEarner()
     {
-        return this.isComboActive ? this.pointEarnerWithoutCombo : this.pointEarner;
+        return this.isTimedComboActive ? this.pointEarnerWithoutCombo : this.pointEarner;
     }
 
     public void SpawnDvd()
@@ -151,51 +151,51 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseComboMultiplier(float comboMulti)
     {
-        this.comboMultiplier += (float) Math.Round(this.comboMultiplier * comboMulti, 2);
+        this.timedComboMultiplier += (float) Math.Round(this.timedComboMultiplier * comboMulti, 2);
 
-        if (this.isComboActive)
+        if (this.isTimedComboActive)
         {
-            this.pointEarner = this.pointEarnerWithoutCombo * this.comboMultiplier;
-            this.comboText.text = this.comboMultiplier + "x";
+            this.pointEarner = this.pointEarnerWithoutCombo * this.timedComboMultiplier;
+            this.comboText.text = this.timedComboMultiplier + "x";
         }
     }
 
     public float GetComboMultiplier()
     {
-        return this.comboMultiplier;
+        return this.timedComboMultiplier;
     }
 
     public void IncreaseComboDuration(float duration)
     {
-        this.comboDuration += duration;
-        this.comboSlider.maxValue = this.comboDuration;
+        this.timedComboDuration += duration;
+        this.comboSlider.maxValue = this.timedComboDuration;
     }
 
     public float GetComboDuration()
     {
-        return this.comboDuration;
+        return this.timedComboDuration;
     }
 
     public void StartCombo()
     {
-        if (this.upgradesManager.GetUpgradeCount(Constants.COMBO_MULTIPLIER_NAME) > 0)
+        if (this.upgradesManager.GetUpgradeCount(Constants.TIMED_COMBO_MULTIPLIER_NAME) > 0)
         {
-            this.comboCountdownTimer = 0;
+            this.timedComboCountdownTimer = 0;
 
-            if (!this.isComboActive)
+            if (!this.isTimedComboActive)
             {
-                this.isComboActive = true;
+                this.isTimedComboActive = true;
                 this.pointEarnerWithoutCombo = this.pointEarner;
-                this.pointEarner = this.pointEarnerWithoutCombo * this.comboMultiplier;
-                this.comboSlider.maxValue = this.comboDuration;
-                this.comboText.text = this.comboMultiplier + "x";
+                this.pointEarner = this.pointEarnerWithoutCombo * this.timedComboMultiplier;
+                this.comboSlider.maxValue = this.timedComboDuration;
+                this.comboText.text = this.timedComboMultiplier + "x";
             }
         }
     }
 
     public void EndCombo()
     {
-        this.isComboActive = false;
+        this.isTimedComboActive = false;
         this.pointEarner = this.pointEarnerWithoutCombo;
         this.comboText.text = "";
     }
