@@ -23,6 +23,8 @@ public class Constants
     public const float PERFECT_STREAK_MULTIPLIER_INCREASE = 0.5f;
     public const float TIMED_COMBO_MULTIPLIER_INCREASE = 0.25f;
     public const float TIMED_COMBO_DURATION_INCREASE = 0.25f;
+    public const int CRITICAL_HIT_INCREASE = 2;
+    public const int BASE_CRITICAL_HIT_CHANCE = 0;
 
     // Rebirth upgrades constants
     public const int REBIRTH_SPEED_INCREASE_COUNT = 0;
@@ -38,6 +40,7 @@ public class Constants
     public const int PERFECT_STREAK_MULTIPLIER_COST = 10;
     public const int TIMED_COMBO_MULTIPLIER_BASE_COST = 15;
     public const int TIMED_COMBO_DURATION_BASE_COST = 20;
+    public const int CRITICAL_HIT_BASE_COST = 50;
 
     // Upgrades names
     public const string SPEED_INCREASE_NAME = "speedIncrease";
@@ -50,5 +53,6 @@ public class Constants
     public const string PERFECT_STREAK_MULTIPLIER_NAME = "perfectStreakMultiplier";
     public const string TIMED_COMBO_MULTIPLIER_NAME = "timedComboMultiplier";
     public const string TIMED_COMBO_DURATION_NAME = "timedComboDuration";
+    public const string CRITICAL_HIT_NAME = "criticalHit";
 
 }

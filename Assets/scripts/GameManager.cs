@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public float timedComboDuration;
     public float timedComboCountdownTimer;
     private bool isTimedComboActive;
+    public int criticalHitChance;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
         this.perfectStreakMultiplier = Constants.BASE_PERFECT_STREAK_MULTIPLIER;
         this.timedComboMultiplier = Constants.BASE_TIMED_COMBO_MULTIPLER;
         this.timedComboDuration = Constants.BASE_TIMED_COMBO_DURATION;
+        this.criticalHitChance = Constants.BASE_CRITICAL_HIT_CHANCE;
 
         for (int i = 0; i < upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
         {
@@ -75,7 +77,10 @@ public class GameManager : MonoBehaviour
 
     public void AddPoints()
     {
-        this.points += this.currentPerfectStreak >= Constants.PERFECT_STREAK_NEEDED ? this.pointEarner  * this.perfectStreakMultiplier : this.pointEarner;
+        float tmpPointsGain = this.currentPerfectStreak >= Constants.PERFECT_STREAK_NEEDED ? this.pointEarner * this.perfectStreakMultiplier : this.pointEarner;
+        tmpPointsGain = UnityEngine.Random.Range(1, 101) <= this.criticalHitChance ? tmpPointsGain * 3 : tmpPointsGain;
+
+        this.points += tmpPointsGain;
         this.pointsText.text = this.points + "";
 
         if (this.upgradesShop.gameObject.activeSelf)
@@ -222,5 +227,10 @@ public class GameManager : MonoBehaviour
         this.isTimedComboActive = false;
         this.pointEarner = this.pointEarnerWithoutCombo;
         this.comboText.text = "";
+    }
+
+    public void IncreaseCriticalHitChance(int chance)
+    {
+        this.criticalHitChance += chance;
     }
 }
