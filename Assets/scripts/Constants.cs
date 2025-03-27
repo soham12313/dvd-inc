@@ -3,6 +3,7 @@ public class Constants
     // Dvd constants
     public const int BASE_DVD_SPEED = 5;
     public const int BASE_DVD_COUNT = 1;
+    public const float IGNORE_WALL_COLLISION_COOLDOWN = 0.5f;
 
     // Points constants
     public const int BASE_POINTS = 0;

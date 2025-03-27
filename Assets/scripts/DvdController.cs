@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DvdController : MonoBehaviour
 {
-    private float movementSpeed;
+    private float movementSpeed, ignoreWallCollisionTimer;
+    private bool isIgnoringWallCollision;
     public float bounceVariation;
     private Rigidbody2D rb;
     private GameManager gameManager;
@@ -12,6 +13,8 @@ public class DvdController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        this.ignoreWallCollisionTimer = 0;
+        this.isIgnoringWallCollision = false;
         this.rb = GetComponent<Rigidbody2D>();
         this.gameManager = GameObject.FindObjectOfType<GameManager>();
 
@@ -22,7 +25,18 @@ public class DvdController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.rb.velocity = rb.velocity.normalized * (float)movementSpeed;
+        this.rb.velocity = rb.velocity.normalized * (float) movementSpeed;
+
+        if (isIgnoringWallCollision)
+        {
+            ignoreWallCollisionTimer += Time.deltaTime;
+
+            if (ignoreWallCollisionTimer >= Constants.IGNORE_WALL_COLLISION_COOLDOWN)
+            {
+                isIgnoringWallCollision = false;
+                ignoreWallCollisionTimer = 0;
+            }
+        }
     }
 
     public void SetMovementSpeed(float speed)
@@ -64,7 +78,10 @@ public class DvdController : MonoBehaviour
         // Keep the velocity normalized to the base speed
         this.rb.velocity = this.rb.velocity.normalized * (float)movementSpeed;
 
-        this.gameManager.ResetCurrentPerfectStreak();
+        if (!isIgnoringWallCollision)
+        {
+            this.gameManager.ResetCurrentPerfectStreak();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -74,6 +91,9 @@ public class DvdController : MonoBehaviour
             this.gameManager.IncrementCurrentPerfectStreak();
             this.gameManager.AddPoints();
             this.gameManager.StartCombo();
+
+            this.isIgnoringWallCollision = true;
+            this.ignoreWallCollisionTimer += Time.deltaTime;
         }
     }
 }
