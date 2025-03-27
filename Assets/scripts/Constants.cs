@@ -9,16 +9,16 @@ public class Constants
     public const int BASE_POINT_GAIN = 1;
 
     // Combo constants
-    public const float BASE_COMBO_MULTIPLER = 1f;
-    public const float BASE_COMBO_DURATION = 10f;
+    public const float BASE_TIMED_COMBO_MULTIPLER = 1f;
+    public const float BASE_TIMED_COMBO_DURATION = 10f;
 
     // Upgrades constants
     public const float SPEED_INCREASE = 0.1f;
     public const float POINTS_INCREASE = 0.25f;
     public const float CORNER_SCALE_INCREASE = 0.05f;
     public const float BASE_CORNER_SCALE = 1f;
-    public const float COMBO_MULTIPLIER_INCREASE = 0.25f;
-    public const float COMBO_DURATION_INCREASE = 0.25f;
+    public const float TIMED_COMBO_MULTIPLIER_INCREASE = 0.25f;
+    public const float TIMED_COMBO_DURATION_INCREASE = 0.25f;
 
     // Rebirth upgrades constants
     public const int REBIRTH_SPEED_INCREASE_COUNT = 0;
@@ -31,8 +31,8 @@ public class Constants
     public const int POINTS_BASE_COST = 2;
     public const int DVD_BASE_COST = 10;
     public const int CORNER_SCALE_BASE_COST = 5;
-    public const int COMBO_MULTIPLIER_BASE_COST = 15;
-    public const int COMBO_DURATION_BASE_COST = 20;
+    public const int TIMED_COMBO_MULTIPLIER_BASE_COST = 15;
+    public const int TIMED_COMBO_DURATION_BASE_COST = 20;
 
     // Upgrades names
     public const string SPEED_INCREASE_NAME = "speedIncrease";
@@ -42,7 +42,7 @@ public class Constants
     public const string REBIRTH_DVD_COUNT_NAME = "rebirthDvdCount";
     public const string REBIRTH_POINTS_INCREASE_NAME = "rebirthPointIncrease";
     public const string CORNER_SCALE_NAME = "cornerScale";
-    public const string COMBO_MULTIPLIER_NAME = "comboMultiplier";
-    public const string COMBO_DURATION_NAME = "comboDuration";
+    public const string TIMED_COMBO_MULTIPLIER_NAME = "timedComboMultiplier";
+    public const string TIMED_COMBO_DURATION_NAME = "timedComboDuration";
 
 }

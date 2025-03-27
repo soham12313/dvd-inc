@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 168230928}
   - component: {fileID: 168230927}
   m_Layer: 5
-  m_Name: comboDuration
+  m_Name: timedComboDuration
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1072,7 +1072,7 @@ GameObject:
   - component: {fileID: 244640788}
   - component: {fileID: 244640787}
   m_Layer: 5
-  m_Name: comboMultiplier
+  m_Name: timedComboMultiplier
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2328,7 +2328,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase combo duration
+  m_text: Increase timed combo duration
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
@@ -4016,7 +4016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase combo multiplier
+  m_text: Increase timed combo multiplier
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
@@ -5212,9 +5212,9 @@ MonoBehaviour:
   pointEarnerWithoutCombo: 0
   pointEarner: 0
   cornerScale: 0
-  comboMultiplier: 0
-  comboDuration: 0
-  comboCountdownTimer: 0
+  timedComboMultiplier: 0
+  timedComboDuration: 0
+  timedComboCountdownTimer: 0
 --- !u!4 &1700289531
 Transform:
   m_ObjectHideFlags: 0
