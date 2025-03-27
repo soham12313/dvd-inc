@@ -24,6 +24,7 @@ public class Constants
     public const float TIMED_COMBO_MULTIPLIER_INCREASE = 0.25f;
     public const float TIMED_COMBO_DURATION_INCREASE = 0.25f;
     public const int CRITICAL_HIT_INCREASE = 2;
+    public const int BASE_CRITICAL_HIT_CHANCE = 0;
 
     // Rebirth upgrades constants
     public const int REBIRTH_SPEED_INCREASE_COUNT = 0;
