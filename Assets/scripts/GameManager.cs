@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public float pointEarnerWithoutCombo;
     public float pointEarner;
     public float cornerScale;
+    public float perfectStreakMultiplier;
     public float timedComboMultiplier;
     public float timedComboDuration;
     public float timedComboCountdownTimer;
@@ -147,6 +148,16 @@ public class GameManager : MonoBehaviour
     public float GetCornerScale()
     {
         return this.cornerScale;
+    }
+
+    public void IncreasePerfectStreakMultiplier(float perfectMulti)
+    {
+        this.perfectStreakMultiplier += (float) Math.Round(this.perfectStreakMultiplier * perfectMulti, 2);
+    }
+
+    public float GetPerfectStreakMultiplier()
+    {
+        return this.perfectStreakMultiplier;
     }
 
     public void IncreaseComboMultiplier(float comboMulti)
