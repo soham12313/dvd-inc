@@ -30,6 +30,11 @@ public class UpgradesShop : MonoBehaviour
 
         UpdateButtonColors();
         UpdateButtonsCost();
+
+        if (this.toolTip.activeSelf)
+        {
+            this.toolTip.GetComponent<ToolTipController>().SetCountText(upgradesManager.upgradeMap[upgradeName].count + "/" + upgradesManager.upgradeMap[upgradeName].maxCount);
+        }
     }
 
     public void UpdateButtonColors()
