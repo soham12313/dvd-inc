@@ -1573,6 +1573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4e6886d9c6a914593ed224d4bd838a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  title: {fileID: 601756962}
   description: {fileID: 1508673880}
   count: {fileID: 1062464117}
   canvasTransform: {fileID: 1420961939}

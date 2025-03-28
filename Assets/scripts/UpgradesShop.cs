@@ -76,6 +76,7 @@ public class UpgradesShop : MonoBehaviour
     public void OnUpgradeHover(string upgradeName)
     {
         this.toolTip.SetActive(true);
+        this.toolTip.GetComponent<ToolTipController>().SetTitleText(upgradeName);
         this.toolTip.GetComponent<ToolTipController>().SetCountText(upgradesManager.upgradeMap[upgradeName].count + "/" + upgradesManager.upgradeMap[upgradeName].maxCount);
     }
 

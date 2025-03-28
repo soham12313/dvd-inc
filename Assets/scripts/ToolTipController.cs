@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ToolTipController : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private TextMeshProUGUI count;
     [SerializeField] private Canvas canvasTransform;
@@ -20,6 +21,11 @@ public class ToolTipController : MonoBehaviour
     {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform.transform as RectTransform, Input.mousePosition, canvasTransform.worldCamera, out mousePos);
         transform.localPosition = mousePos;
+    }
+
+    public void SetTitleText(string text)
+    {
+        this.title.text = text;
     }
 
     public void SetDescriptionText(string text)
