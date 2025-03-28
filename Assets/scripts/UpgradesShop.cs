@@ -6,6 +6,7 @@ using TMPro;
 
 public class UpgradesShop : MonoBehaviour
 {
+    [SerializeField] private GameObject toolTip;
     private UpgradesManager upgradesManager;
     private GameManager gameManager;
 
@@ -70,5 +71,16 @@ public class UpgradesShop : MonoBehaviour
         {
             countText[i].GetComponent<TextMeshProUGUI>().text = upgradesManager.upgradeMap[buttons[i].name].count + "/" + upgradesManager.upgradeMap[buttons[i].name].maxCount;
         }
+    }
+
+    public void OnUpgradeHover(string upgradeName)
+    {
+        this.toolTip.SetActive(true);
+        this.toolTip.GetComponent<ToolTipController>().SetCountText(upgradesManager.upgradeMap[upgradeName].count + "/" + upgradesManager.upgradeMap[upgradeName].maxCount);
+    }
+
+    public void OnUpgradeExit()
+    {
+        this.toolTip.SetActive(false);
     }
 }
