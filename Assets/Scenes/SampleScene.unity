@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 114039274}
   - component: {fileID: 114039277}
   m_Layer: 5
-  m_Name: perfectStreakMultiplier
+  m_Name: Perfect Streak
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -426,7 +426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -187}
+  m_AnchoredPosition: {x: 9, y: -190}
   m_SizeDelta: {x: 830, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &114039274
@@ -482,7 +482,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: perfectStreakMultiplier
+          m_StringArgument: Perfect Streak
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &114039275
@@ -549,7 +549,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: perfectStreakMultiplier
+            m_StringArgument: Perfect Streak
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 168230927}
   - component: {fileID: 168230930}
   m_Layer: 5
-  m_Name: timedComboDuration
+  m_Name: Timed Combo Extension
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -875,7 +875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -347}
+  m_AnchoredPosition: {x: 9, y: -350}
   m_SizeDelta: {x: 830, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168230927
@@ -931,7 +931,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: timedComboDuration
+          m_StringArgument: Timed Combo Extension
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &168230928
@@ -998,7 +998,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: timedComboDuration
+            m_StringArgument: Timed Combo Extension
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
@@ -1165,7 +1165,7 @@ GameObject:
   - component: {fileID: 244640787}
   - component: {fileID: 244640790}
   m_Layer: 5
-  m_Name: timedComboMultiplier
+  m_Name: Timed Combo Amplifier
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1190,7 +1190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -267}
+  m_AnchoredPosition: {x: 9, y: -270}
   m_SizeDelta: {x: 830, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244640787
@@ -1246,7 +1246,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: timedComboMultiplier
+          m_StringArgument: Timed Combo Amplifier
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &244640788
@@ -1313,7 +1313,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: timedComboMultiplier
+            m_StringArgument: Timed Combo Amplifier
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
@@ -2797,7 +2797,7 @@ GameObject:
   - component: {fileID: 701201421}
   - component: {fileID: 701201424}
   m_Layer: 5
-  m_Name: speedIncrease
+  m_Name: Speed Boost
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2878,7 +2878,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: speedIncrease
+          m_StringArgument: Speed Boost
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &701201422
@@ -2945,7 +2945,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: speedIncrease
+            m_StringArgument: Speed Boost
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
@@ -4204,7 +4204,7 @@ GameObject:
   - component: {fileID: 1294201906}
   - component: {fileID: 1294201909}
   m_Layer: 5
-  m_Name: dvdCount
+  m_Name: Multidisc
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4229,7 +4229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 52.472046}
+  m_AnchoredPosition: {x: 9, y: -30}
   m_SizeDelta: {x: 830, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294201906
@@ -4285,7 +4285,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: dvdCount
+          m_StringArgument: Multidisc
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1294201907
@@ -4352,7 +4352,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: dvdCount
+            m_StringArgument: Multidisc
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
@@ -4671,8 +4671,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 701201420}
-  - {fileID: 1294201905}
   - {fileID: 1642278924}
+  - {fileID: 1294201905}
   - {fileID: 1798118102}
   - {fileID: 114039273}
   - {fileID: 244640786}
@@ -5356,7 +5356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.43499756, y: 0.00000095367}
+  m_AnchoredPosition: {x: -0.43499756, y: 0}
   m_SizeDelta: {x: 271.68, y: 80.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508673880
@@ -5545,7 +5545,7 @@ GameObject:
   - component: {fileID: 1642278925}
   - component: {fileID: 1642278928}
   m_Layer: 5
-  m_Name: pointsIncrease
+  m_Name: Point Surge
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5570,7 +5570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -27.528606}
+  m_AnchoredPosition: {x: 9, y: 50}
   m_SizeDelta: {x: 830, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642278925
@@ -5626,7 +5626,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: pointsIncrease
+          m_StringArgument: Point Surge
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1642278926
@@ -5693,7 +5693,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: pointsIncrease
+            m_StringArgument: Point Surge
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
@@ -6344,7 +6344,7 @@ GameObject:
   - component: {fileID: 1798118103}
   - component: {fileID: 1798118106}
   m_Layer: 5
-  m_Name: cornerScale
+  m_Name: Corner Mastery
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6369,7 +6369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -107.52905}
+  m_AnchoredPosition: {x: 9, y: -110}
   m_SizeDelta: {x: 830, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798118103
@@ -6425,7 +6425,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: cornerScale
+          m_StringArgument: Corner Mastery
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1798118104
@@ -6492,7 +6492,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: cornerScale
+            m_StringArgument: Corner Mastery
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
@@ -6948,7 +6948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -427}
+  m_AnchoredPosition: {x: 9, y: -430}
   m_SizeDelta: {x: 830, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974935199
@@ -7004,7 +7004,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: criticalHit
+          m_StringArgument: Critical Hit
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1974935200
@@ -7071,7 +7071,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: criticalHit
+            m_StringArgument: Critical Hit
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
