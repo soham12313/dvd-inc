@@ -16,7 +16,6 @@ public class UpgradesShop : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
         UpdateButtonColors();
         UpdateButtonsCost();
-        UpdateUpgradesCountText();
     }
 
     public void PurchaseUpgrade(string upgradeName)
@@ -31,7 +30,6 @@ public class UpgradesShop : MonoBehaviour
 
         UpdateButtonColors();
         UpdateButtonsCost();
-        UpdateUpgradesCountText();
     }
 
     public void UpdateButtonColors()
@@ -59,17 +57,6 @@ public class UpgradesShop : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             costText[i].GetComponent<TextMeshProUGUI>().text = upgradesManager.upgradeMap[buttons[i].name].currentCost + " points";
-        }
-    }
-
-    public void UpdateUpgradesCountText()
-    {
-        GameObject[] buttons = GameObject.FindGameObjectsWithTag("UpgradeButton");
-        GameObject[] countText = GameObject.FindGameObjectsWithTag("UpgradeCount");
-
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            countText[i].GetComponent<TextMeshProUGUI>().text = upgradesManager.upgradeMap[buttons[i].name].count + "/" + upgradesManager.upgradeMap[buttons[i].name].maxCount;
         }
     }
 
