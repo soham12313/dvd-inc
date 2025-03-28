@@ -7,10 +7,19 @@ public class ToolTipController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private TextMeshProUGUI count;
+    [SerializeField] private Canvas canvasTransform;
+    private Vector2 mousePos;
+
+    private void OnEnable()
+    {
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform.transform as RectTransform, Input.mousePosition, canvasTransform.worldCamera, out mousePos);
+        transform.localPosition = mousePos;
+    }
 
     public void Update()
     {
-        transform.position = Input.mousePosition + new Vector3(1, 1);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform.transform as RectTransform, Input.mousePosition, canvasTransform.worldCamera, out mousePos);
+        transform.localPosition = mousePos;
     }
 
     public void SetDescriptionText(string text)
