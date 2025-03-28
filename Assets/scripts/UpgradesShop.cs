@@ -6,6 +6,7 @@ using TMPro;
 
 public class UpgradesShop : MonoBehaviour
 {
+    [SerializeField] private GameObject toolTip;
     private UpgradesManager upgradesManager;
     private GameManager gameManager;
 
@@ -15,7 +16,6 @@ public class UpgradesShop : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
         UpdateButtonColors();
         UpdateButtonsCost();
-        UpdateUpgradesCountText();
     }
 
     public void PurchaseUpgrade(string upgradeName)
@@ -30,7 +30,11 @@ public class UpgradesShop : MonoBehaviour
 
         UpdateButtonColors();
         UpdateButtonsCost();
-        UpdateUpgradesCountText();
+
+        if (this.toolTip.activeSelf)
+        {
+            this.toolTip.GetComponent<ToolTipController>().SetCountText(upgradesManager.upgradeMap[upgradeName].count + "/" + upgradesManager.upgradeMap[upgradeName].maxCount);
+        }
     }
 
     public void UpdateButtonColors()
@@ -61,14 +65,16 @@ public class UpgradesShop : MonoBehaviour
         }
     }
 
-    public void UpdateUpgradesCountText()
+    public void OnUpgradeHover(string upgradeName)
     {
-        GameObject[] buttons = GameObject.FindGameObjectsWithTag("UpgradeButton");
-        GameObject[] countText = GameObject.FindGameObjectsWithTag("UpgradeCount");
+        this.toolTip.SetActive(true);
+        this.toolTip.GetComponent<ToolTipController>().SetTitleText(upgradeName);
+        this.toolTip.GetComponent<ToolTipController>().SetDescriptionText(Constants.UPGRADES_DESCRIPTIONS[upgradeName]);
+        this.toolTip.GetComponent<ToolTipController>().SetCountText(upgradesManager.upgradeMap[upgradeName].count + "/" + upgradesManager.upgradeMap[upgradeName].maxCount);
+    }
 
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            countText[i].GetComponent<TextMeshProUGUI>().text = upgradesManager.upgradeMap[buttons[i].name].count + "/" + upgradesManager.upgradeMap[buttons[i].name].maxCount;
-        }
+    public void OnUpgradeExit()
+    {
+        this.toolTip.SetActive(false);
     }
 }

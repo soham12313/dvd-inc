@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class Constants
 {
     // Dvd constants
@@ -43,16 +45,28 @@ public class Constants
     public const int CRITICAL_HIT_BASE_COST = 50;
 
     // Upgrades names
-    public const string SPEED_INCREASE_NAME = "speedIncrease";
-    public const string POINTS_INCREASE_NAME = "pointsIncrease";
-    public const string DVD_COUNT_NAME = "dvdCount";
-    public const string REBIRTH_SPEED_INCREASE_NAME = "rebirthSpeedIncrease";
-    public const string REBIRTH_DVD_COUNT_NAME = "rebirthDvdCount";
-    public const string REBIRTH_POINTS_INCREASE_NAME = "rebirthPointIncrease";
-    public const string CORNER_SCALE_NAME = "cornerScale";
-    public const string PERFECT_STREAK_MULTIPLIER_NAME = "perfectStreakMultiplier";
-    public const string TIMED_COMBO_MULTIPLIER_NAME = "timedComboMultiplier";
-    public const string TIMED_COMBO_DURATION_NAME = "timedComboDuration";
-    public const string CRITICAL_HIT_NAME = "criticalHit";
+    public const string SPEED_INCREASE_NAME = "Speed Boost";
+    public const string POINTS_INCREASE_NAME = "Point Surge";
+    public const string DVD_COUNT_NAME = "Multidisc";
+    public const string CORNER_SCALE_NAME = "Corner Mastery";
+    public const string PERFECT_STREAK_MULTIPLIER_NAME = "Perfect Streak";
+    public const string TIMED_COMBO_MULTIPLIER_NAME = "Timed Combo Amplifier";
+    public const string TIMED_COMBO_DURATION_NAME = "Timed Combo Extension";
+    public const string CRITICAL_HIT_NAME = "Critical Hit";
+    public const string REBIRTH_SPEED_INCREASE_NAME = "RebirthSpeedIncrease";
+    public const string REBIRTH_DVD_COUNT_NAME = "RebirthDvdCount";
+    public const string REBIRTH_POINTS_INCREASE_NAME = "RebirthPointIncrease";
+
+    public static Dictionary<string, string> UPGRADES_DESCRIPTIONS = new Dictionary<string, string>
+    {
+        [SPEED_INCREASE_NAME] = "Increases the speed of the dvd by 10%",
+        [POINTS_INCREASE_NAME] = "Increases the amount of points gained per hit by 25%",
+        [DVD_COUNT_NAME] = "Spawns one more dvd",
+        [CORNER_SCALE_NAME] = "Expands corner hitboxes by 5%",
+        [PERFECT_STREAK_MULTIPLIER_NAME] = "Consecutive hits without a wall increase points by 50% per level",
+        [TIMED_COMBO_MULTIPLIER_NAME] = "Boosts the timed combo multiplier",
+        [TIMED_COMBO_DURATION_NAME] = "Extends the timed combo duration",
+        [CRITICAL_HIT_NAME] = "2% higher chance for critical hits (3x points)"
+    };
 
 }
