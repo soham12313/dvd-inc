@@ -1505,8 +1505,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -155.97504, y: -65.72}
-  m_SizeDelta: {x: 289.95, y: 141.11}
+  m_AnchoredPosition: {x: -155.97504, y: -38.61}
+  m_SizeDelta: {x: 240, y: 115}
   m_Pivot: {x: 0, y: -0.09}
 --- !u!114 &258487328
 MonoBehaviour:
@@ -2149,10 +2149,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 258487327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.43499756, y: 35.6}
-  m_SizeDelta: {x: 271.68, y: 56.17}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 121.24999, y: -30}
+  m_SizeDelta: {x: 232.5, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &601756962
 MonoBehaviour:
@@ -3958,10 +3958,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 258487327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107.600006, y: -67}
-  m_SizeDelta: {x: 63.79, y: 50}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -35, y: 0.5}
+  m_SizeDelta: {x: 65, y: 50}
   m_Pivot: {x: 0.5, y: 0.01}
 --- !u!114 &1062464117
 MonoBehaviour:
@@ -5354,10 +5354,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 258487327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.43499756, y: 0}
-  m_SizeDelta: {x: 271.68, y: 80.27}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 121.24999, y: -10}
+  m_SizeDelta: {x: 232.5, y: 80.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508673880
 MonoBehaviour:
@@ -6923,7 +6923,7 @@ GameObject:
   - component: {fileID: 1974935199}
   - component: {fileID: 1974935202}
   m_Layer: 5
-  m_Name: criticalHit
+  m_Name: Critical Hit
   m_TagString: UpgradeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
