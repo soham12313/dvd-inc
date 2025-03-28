@@ -62,11 +62,11 @@ public class Constants
         [SPEED_INCREASE_NAME] = "Increases the speed of the dvd by 10%",
         [POINTS_INCREASE_NAME] = "Increases the amount of points gained per hit by 25%",
         [DVD_COUNT_NAME] = "Spawns one more dvd",
-        [CORNER_SCALE_NAME] = "Enlarges corner size by 5%",
-        [PERFECT_STREAK_MULTIPLIER_NAME] = "hitting corners atleast 2 times in a row without hitting a wall multiplies the amount of points youre supposed to get by 50% (50% each level)",
+        [CORNER_SCALE_NAME] = "Expands corner hitboxes by 5%",
+        [PERFECT_STREAK_MULTIPLIER_NAME] = "Consecutive hits without a wall increase points by 50% per level",
         [TIMED_COMBO_MULTIPLIER_NAME] = "Hitting a corner starts a timed combo, this upgrade increases the multiplier of said combo",
         [TIMED_COMBO_DURATION_NAME] = "Hitting a corner starts a timed combo, this upgrade increases the duration of said combo",
-        [CRITICAL_HIT_NAME] = "Hitting a corner has a small chance to hit a critical hit which triples the amount of points you are supposed to get, each upgrade increases chance by 2%"
+        [CRITICAL_HIT_NAME] = "2% higher chance for critical hits (3x points)"
     };
 
 }
