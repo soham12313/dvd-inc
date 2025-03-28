@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class Constants
 {
     // Dvd constants
@@ -54,5 +56,17 @@ public class Constants
     public const string TIMED_COMBO_MULTIPLIER_NAME = "timedComboMultiplier";
     public const string TIMED_COMBO_DURATION_NAME = "timedComboDuration";
     public const string CRITICAL_HIT_NAME = "criticalHit";
+
+    public static Dictionary<string, string> UPGRADES_DESCRIPTIONS = new Dictionary<string, string>
+    {
+        [SPEED_INCREASE_NAME] = "Increases the speed of the dvd by 10%",
+        [POINTS_INCREASE_NAME] = "Increases the amount of points gained per hit by 25%",
+        [DVD_COUNT_NAME] = "Spawns one more dvd",
+        [CORNER_SCALE_NAME] = "Enlarges corner size by 5%",
+        [PERFECT_STREAK_MULTIPLIER_NAME] = "hitting corners atleast 2 times in a row without hitting a wall multiplies the amount of points youre supposed to get by 50% (50% each level)",
+        [TIMED_COMBO_MULTIPLIER_NAME] = "Hitting a corner starts a timed combo, this upgrade increases the multiplier of said combo",
+        [TIMED_COMBO_DURATION_NAME] = "Hitting a corner starts a timed combo, this upgrade increases the duration of said combo",
+        [CRITICAL_HIT_NAME] = "Hitting a corner has a small chance to hit a critical hit which triples the amount of points you are supposed to get, each upgrade increases chance by 2%"
+    };
 
 }
