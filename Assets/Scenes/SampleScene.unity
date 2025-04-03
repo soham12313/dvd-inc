@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25% more points
+  m_text: Point Surge
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10% more speed
+  m_text: Speed Boost
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1 more dvd
+  m_text: Multidisc
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
@@ -2618,7 +2618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase timed combo duration
+  m_text: Timed Combo Extension
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
@@ -3077,7 +3077,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase perfect streak multiplier
+  m_text: Perfect Streak
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
@@ -4874,7 +4874,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase timed combo multiplier
+  m_text: Timed Combo Amplifier
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
@@ -6296,7 +6296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5% bigger corners
+  m_text: Corner Mastery
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
@@ -7039,7 +7039,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +2% Critical hit chance
+  m_text: Critical Hit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
   m_sharedMaterial: {fileID: -4485865356683183559, guid: c01a049dc13710b47a3e32f2c954e368, type: 2}
