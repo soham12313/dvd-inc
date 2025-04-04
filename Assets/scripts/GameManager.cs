@@ -77,6 +77,9 @@ public class GameManager : MonoBehaviour
         this.timedComboMultiplier = Constants.BASE_TIMED_COMBO_MULTIPLER;
         this.timedComboDuration = Constants.BASE_TIMED_COMBO_DURATION;
         this.criticalHitChance = Constants.BASE_CRITICAL_HIT_CHANCE;
+        this.pointsText.text = this.points + "";
+        upgradesShop.UpdateButtonsCost();
+        upgradesShop.UpdateButtonColors();
     }
 
     public void OnRebirth()
@@ -84,10 +87,19 @@ public class GameManager : MonoBehaviour
         upgradesManager.InitializeNormalUpgrades();
         this.ResetValues();
 
+        GameObject[] dvds = GameObject.FindGameObjectsWithTag("DVD");
+
+        foreach (GameObject dvd in dvds)
+        {
+            Destroy(dvd);
+        }
+
         for (int i = 0; i < upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
         {
             this.SpawnDvd();
         }
+
+        this.rebirthButton.SetActive(false);
     }
 
     public float GetPoints()
