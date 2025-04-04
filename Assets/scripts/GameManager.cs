@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI pointsText;
     [SerializeField]
-    private GameObject dvd;
+    private GameObject dvd, rebirthButton;
     [SerializeField]
     private UpgradesManager upgradesManager;
     [SerializeField]
@@ -37,16 +37,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         upgradesManager.InitializeNormalUpgrades();
-
-        this.dvdSpeed = Constants.BASE_DVD_SPEED;
-        this.points = Constants.BASE_POINTS;
-        this.pointEarner = Constants.BASE_POINT_GAIN;
-        this.cornerScale = Constants.BASE_CORNER_SCALE;
-        this.ResetCurrentPerfectStreak();
-        this.perfectStreakMultiplier = Constants.BASE_PERFECT_STREAK_MULTIPLIER;
-        this.timedComboMultiplier = Constants.BASE_TIMED_COMBO_MULTIPLER;
-        this.timedComboDuration = Constants.BASE_TIMED_COMBO_DURATION;
-        this.criticalHitChance = Constants.BASE_CRITICAL_HIT_CHANCE;
+        this.ResetValues();
 
         for (int i = 0; i < upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
         {
@@ -67,6 +58,35 @@ public class GameManager : MonoBehaviour
             {
                 this.EndCombo();
             }
+        }
+
+        if (this.points >= Constants.REBIRTH_COST)
+        {
+            rebirthButton.SetActive(true);
+        }
+    }
+
+    public void ResetValues()
+    {
+        this.dvdSpeed = Constants.BASE_DVD_SPEED;
+        this.points = Constants.BASE_POINTS;
+        this.pointEarner = Constants.BASE_POINT_GAIN;
+        this.cornerScale = Constants.BASE_CORNER_SCALE;
+        this.ResetCurrentPerfectStreak();
+        this.perfectStreakMultiplier = Constants.BASE_PERFECT_STREAK_MULTIPLIER;
+        this.timedComboMultiplier = Constants.BASE_TIMED_COMBO_MULTIPLER;
+        this.timedComboDuration = Constants.BASE_TIMED_COMBO_DURATION;
+        this.criticalHitChance = Constants.BASE_CRITICAL_HIT_CHANCE;
+    }
+
+    public void OnRebirth()
+    {
+        upgradesManager.InitializeNormalUpgrades();
+        this.ResetValues();
+
+        for (int i = 0; i < upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
+        {
+            this.SpawnDvd();
         }
     }
 

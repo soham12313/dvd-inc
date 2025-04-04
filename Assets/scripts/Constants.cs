@@ -29,6 +29,7 @@ public class Constants
     public const int BASE_CRITICAL_HIT_CHANCE = 0;
 
     // Rebirth upgrades constants
+    public const int REBIRTH_COST = 100000;
     public const int REBIRTH_SPEED_INCREASE_COUNT = 0;
     public const int REBIRTH_DVD_COUNT = 1;
     public const int REBIRTH_POINTS_INCREASE_COUNT = 0;
