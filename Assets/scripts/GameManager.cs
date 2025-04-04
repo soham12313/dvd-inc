@@ -99,11 +99,6 @@ public class GameManager : MonoBehaviour
             Destroy(dvd);
         }
 
-        for (int i = 0; i < upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
-        {
-            this.SpawnDvd();
-        }
-
         this.rebirthButton.SetActive(false);
     }
 
