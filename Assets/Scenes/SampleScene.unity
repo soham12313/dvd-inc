@@ -6406,7 +6406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsText: {fileID: 127689013}
   dvd: {fileID: 1507857555151232809, guid: b0e9320ad167fca41a0988627111b1d7, type: 3}
-  rebirthButton: {fileID: 0}
+  rebirthButton: {fileID: 1433669331}
   upgradesManager: {fileID: 1700289532}
   upgradesShop: {fileID: 1309305761}
   comboSlider: {fileID: 534906366}

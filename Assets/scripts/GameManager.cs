@@ -72,10 +72,15 @@ public class GameManager : MonoBehaviour
         this.points = Constants.BASE_POINTS;
         this.pointEarner = Constants.BASE_POINT_GAIN;
         this.cornerScale = Constants.BASE_CORNER_SCALE;
+        this.IncreaseCornerScale(0);
         this.ResetCurrentPerfectStreak();
         this.perfectStreakMultiplier = Constants.BASE_PERFECT_STREAK_MULTIPLIER;
         this.timedComboMultiplier = Constants.BASE_TIMED_COMBO_MULTIPLER;
         this.timedComboDuration = Constants.BASE_TIMED_COMBO_DURATION;
+        this.timedComboCountdownTimer = 0;
+        this.isTimedComboActive = false;
+        this.comboSlider.value = 0;
+        this.comboText.text = "";
         this.criticalHitChance = Constants.BASE_CRITICAL_HIT_CHANCE;
         this.pointsText.text = this.points + "";
         upgradesShop.UpdateButtonsCost();
