@@ -21,7 +21,7 @@ public class UpgradesShop : MonoBehaviour
 
     public void PurchaseUpgrade(string upgradeName)
     {
-        float points = isRebirth ? 10f : gameManager.GetPoints();
+        float points = isRebirth ? gameManager.GetRebirthPoints() : gameManager.GetPoints();
         if (points < upgradesManager.upgradeMap[upgradeName].currentCost || upgradesManager.upgradeMap[upgradeName].IsMax())
             return;
 
@@ -50,7 +50,7 @@ public class UpgradesShop : MonoBehaviour
     public void UpdateButtonColors()
     {
         GameObject[] buttons = GameObject.FindGameObjectsWithTag("UpgradeButton");
-        float points = isRebirth ? 10f : gameManager.GetPoints();
+        float points = isRebirth ? gameManager.GetRebirthPoints() : gameManager.GetPoints();
 
         for (int i = 0; i < buttons.Length; i++)
         {
