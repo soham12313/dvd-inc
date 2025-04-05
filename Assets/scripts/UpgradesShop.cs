@@ -27,11 +27,11 @@ public class UpgradesShop : MonoBehaviour
 
         if (this.isRebirth)
         {
-
+            gameManager.RemoveRebirthPoints(this.upgradesManager.upgradeMap[upgradeName].currentCost);
         }
         else
         {
-            gameManager.RemovePoints(upgradesManager.upgradeMap[upgradeName].currentCost);
+            gameManager.RemovePoints(this.upgradesManager.upgradeMap[upgradeName].currentCost);
         }
 
         this.upgradesManager.upgradeMap[upgradeName].IncrementCount();
