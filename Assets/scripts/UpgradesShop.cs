@@ -9,6 +9,7 @@ public class UpgradesShop : MonoBehaviour
     [SerializeField] private GameObject toolTip;
     private UpgradesManager upgradesManager;
     private GameManager gameManager;
+    [SerializeField] private bool isRebirth;
 
     private void OnEnable()
     {
@@ -20,10 +21,19 @@ public class UpgradesShop : MonoBehaviour
 
     public void PurchaseUpgrade(string upgradeName)
     {
-        if (gameManager.GetPoints() < upgradesManager.upgradeMap[upgradeName].currentCost || upgradesManager.upgradeMap[upgradeName].IsMax())
+        float points = isRebirth ? 10f : gameManager.GetPoints();
+        if (points < upgradesManager.upgradeMap[upgradeName].currentCost || upgradesManager.upgradeMap[upgradeName].IsMax())
             return;
 
-        gameManager.RemovePoints(upgradesManager.upgradeMap[upgradeName].currentCost);
+        if (isRebirth)
+        {
+
+        }
+        else
+        {
+            gameManager.RemovePoints(upgradesManager.upgradeMap[upgradeName].currentCost);
+        }
+
         upgradesManager.upgradeMap[upgradeName].IncrementCount();
         upgradesManager.RunUpgradeEffect(upgradeName, gameManager);
         upgradesManager.upgradeMap[upgradeName].increaseCost(upgradesManager.upgradeMap[upgradeName].baseCost);
@@ -40,6 +50,7 @@ public class UpgradesShop : MonoBehaviour
     public void UpdateButtonColors()
     {
         GameObject[] buttons = GameObject.FindGameObjectsWithTag("UpgradeButton");
+        float points = isRebirth ? 10f : gameManager.GetPoints();
 
         for (int i = 0; i < buttons.Length; i++)
         {
@@ -49,7 +60,7 @@ public class UpgradesShop : MonoBehaviour
             }
             else
             {
-                buttons[i].GetComponent<Image>().color = upgradesManager.upgradeMap[buttons[i].name].currentCost > gameManager.GetPoints() ? Color.red : Color.green;
+                buttons[i].GetComponent<Image>().color = upgradesManager.upgradeMap[buttons[i].name].currentCost > points ? Color.red : Color.green;
             }
         }
     }
@@ -58,10 +69,11 @@ public class UpgradesShop : MonoBehaviour
     {
         GameObject[] buttons = GameObject.FindGameObjectsWithTag("UpgradeButton");
         GameObject[] costText = GameObject.FindGameObjectsWithTag("UpgradeCost");
+        string pointsType = isRebirth ? " RP" : " Points";
 
         for (int i = 0; i < buttons.Length; i++)
         {
-            costText[i].GetComponent<TextMeshProUGUI>().text = upgradesManager.upgradeMap[buttons[i].name].currentCost + " points";
+            costText[i].GetComponent<TextMeshProUGUI>().text = upgradesManager.upgradeMap[buttons[i].name].currentCost + pointsType;
         }
     }
 
