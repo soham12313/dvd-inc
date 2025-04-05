@@ -4038,6 +4038,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolTip: {fileID: 664443470}
+  upgradesManager: {fileID: 1700289532}
+  gameManager: {fileID: 1700289530}
   isRebirth: 1
 --- !u!1 &669625181
 GameObject:
@@ -7928,6 +7930,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolTip: {fileID: 258487326}
+  upgradesManager: {fileID: 1700289532}
+  gameManager: {fileID: 1700289530}
   isRebirth: 0
 --- !u!114 &1309305762
 MonoBehaviour:

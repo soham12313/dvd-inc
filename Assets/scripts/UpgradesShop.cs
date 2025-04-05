@@ -7,14 +7,12 @@ using TMPro;
 public class UpgradesShop : MonoBehaviour
 {
     [SerializeField] private GameObject toolTip;
-    private UpgradesManager upgradesManager;
-    private GameManager gameManager;
+    [SerializeField] private UpgradesManager upgradesManager;
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private bool isRebirth;
 
     private void OnEnable()
     {
-        this.upgradesManager = GameObject.FindObjectOfType<UpgradesManager>();
-        this.gameManager = GameObject.FindObjectOfType<GameManager>();
         this.UpdateButtonColors();
         this.UpdateButtonsCost();
     }
