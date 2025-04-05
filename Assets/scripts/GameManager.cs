@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public float dvdSpeed;
     public float points;
+    public float rebirthPoints;
     public float pointEarnerWithoutCombo;
     public float pointEarner;
     public float cornerScale;
@@ -130,6 +131,21 @@ public class GameManager : MonoBehaviour
         {
             this.upgradesShop.UpdateButtonColors();
         }
+    }
+
+    public float GetRebirthPoints()
+    {
+        return this.rebirthPoints;
+    }
+
+    public void AddRebirthPoints(float rp)
+    {
+        this.rebirthPoints += rp;
+    }
+
+    public void RemoveRebirthPoints(float rp)
+    {
+        this.rebirthPoints -= rp;
     }
 
     public void IncreaseSpeed(float amount)
