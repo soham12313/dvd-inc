@@ -13,13 +13,13 @@ public class ToolTipController : MonoBehaviour
 
     private void OnEnable()
     {
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform.transform as RectTransform, Input.mousePosition, canvasTransform.worldCamera, out mousePos);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(this.canvasTransform.transform as RectTransform, Input.mousePosition, this.canvasTransform.worldCamera, out mousePos);
         transform.localPosition = mousePos;
     }
 
     public void Update()
     {
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform.transform as RectTransform, Input.mousePosition, canvasTransform.worldCamera, out mousePos);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(this.canvasTransform.transform as RectTransform, Input.mousePosition, this.canvasTransform.worldCamera, out mousePos);
         transform.localPosition = mousePos;
     }
 

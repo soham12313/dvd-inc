@@ -10,6 +10,6 @@ public class ForwardScroll : MonoBehaviour, IScrollHandler
 
     public void OnScroll(PointerEventData eventData)
     {
-        scrollRect.OnScroll(eventData);
+        this.scrollRect.OnScroll(eventData);
     }
 }

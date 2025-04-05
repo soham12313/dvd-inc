@@ -37,10 +37,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        upgradesManager.InitializeNormalUpgrades();
+        this.upgradesManager.InitializeNormalUpgrades();
         this.ResetValues();
 
-        for (int i = 0; i < upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
+        for (int i = 0; i < this.upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
         {
             this.SpawnDvd();
         }
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
         if (this.points >= Constants.REBIRTH_COST)
         {
-            rebirthButton.SetActive(true);
+            this.rebirthButton.SetActive(true);
         }
     }
 
@@ -84,13 +84,13 @@ public class GameManager : MonoBehaviour
         this.comboText.text = "";
         this.criticalHitChance = Constants.BASE_CRITICAL_HIT_CHANCE;
         this.pointsText.text = this.points + "";
-        upgradesShop.UpdateButtonsCost();
-        upgradesShop.UpdateButtonColors();
+        this.upgradesShop.UpdateButtonsCost();
+        this.upgradesShop.UpdateButtonColors();
     }
 
     public void OnRebirth()
     {
-        upgradesManager.InitializeNormalUpgrades();
+        this.upgradesManager.InitializeNormalUpgrades();
         this.ResetValues();
 
         GameObject[] dvds = GameObject.FindGameObjectsWithTag("DVD");
