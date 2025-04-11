@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public float dvdSpeed;
     public float points;
+    public int rebirthCount;
     public float rebirthPoints;
     public float pointEarnerWithoutCombo;
     public float pointEarner;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        this.rebirthCount = 1;
         this.upgradesManager.InitializeNormalUpgrades();
         this.ResetValues();
         this.SpawnAllDvds();
@@ -55,11 +57,6 @@ public class GameManager : MonoBehaviour
             {
                 this.EndCombo();
             }
-        }
-
-        if (this.points >= Constants.REBIRTH_COST)
-        {
-            this.rebirthButton.SetActive(true);
         }
     }
 
@@ -124,6 +121,12 @@ public class GameManager : MonoBehaviour
         {
             this.upgradesShop.UpdateButtonColors();
         }
+
+        if (this.points >= Constants.REBIRTH_COST * this.rebirthCount)
+        {
+            this.rebirthButton.SetActive(true);
+        }
+
     }
 
     public void RemovePoints(float removed)
