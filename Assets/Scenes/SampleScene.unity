@@ -2033,7 +2033,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 665137807}
         m_TargetAssemblyTypeName: UpgradesShop, Assembly-CSharp
-        m_MethodName: onRebirthComplete
+        m_MethodName: OnRebirthComplete
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

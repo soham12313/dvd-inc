@@ -39,11 +39,7 @@ public class GameManager : MonoBehaviour
     {
         this.upgradesManager.InitializeNormalUpgrades();
         this.ResetValues();
-
-        for (int i = 0; i < this.upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
-        {
-            this.SpawnDvd();
-        }
+        this.SpawnAllDvds();
     }
 
     private void Update()
@@ -86,6 +82,14 @@ public class GameManager : MonoBehaviour
         this.pointsText.text = this.points + "";
         this.upgradesShop.UpdateButtonsCost();
         this.upgradesShop.UpdateButtonColors();
+    }
+
+    public void SpawnAllDvds()
+    {
+        for (int i = 0; i < this.upgradesManager.GetUpgradeCount(Constants.DVD_COUNT_NAME); i++)
+        {
+            this.SpawnDvd();
+        }
     }
 
     public void OnRebirth()

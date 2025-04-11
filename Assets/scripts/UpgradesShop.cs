@@ -88,8 +88,9 @@ public class UpgradesShop : MonoBehaviour
         this.toolTip.SetActive(false);
     }
 
-    public void onRebirthComplete()
+    public void OnRebirthComplete()
     {
+        this.gameManager.SpawnAllDvds();
         this.gameObject.SetActive(false);
     }
 }
