@@ -87,4 +87,9 @@ public class UpgradesShop : MonoBehaviour
     {
         this.toolTip.SetActive(false);
     }
+
+    public void onRebirthComplete()
+    {
+        this.gameObject.SetActive(false);
+    }
 }
