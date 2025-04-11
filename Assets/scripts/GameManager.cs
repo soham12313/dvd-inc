@@ -8,7 +8,7 @@ using System;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI pointsText;
+    private TextMeshProUGUI pointsText, rebirthPointsText;
     [SerializeField]
     private GameObject dvd, rebirthButton;
     [SerializeField]
@@ -91,6 +91,8 @@ public class GameManager : MonoBehaviour
 
     public void OnRebirth()
     {
+        this.rebirthPoints += Mathf.FloorToInt((float)Math.Pow(points / 20000f, 0.6f));
+        this.rebirthPointsText.text = this.rebirthPoints + " RP";
         this.upgradesManager.InitializeNormalUpgrades();
         this.ResetValues();
 

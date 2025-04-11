@@ -10768,6 +10768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsText: {fileID: 127689013}
+  rebirthPointsText: {fileID: 1194032942}
   dvd: {fileID: 1507857555151232809, guid: b0e9320ad167fca41a0988627111b1d7, type: 3}
   rebirthButton: {fileID: 1433669331}
   upgradesManager: {fileID: 1700289532}
@@ -10776,6 +10777,7 @@ MonoBehaviour:
   comboText: {fileID: 2071073360}
   dvdSpeed: 0
   points: 0
+  rebirthCount: 0
   rebirthPoints: 0
   pointEarnerWithoutCombo: 0
   pointEarner: 0
