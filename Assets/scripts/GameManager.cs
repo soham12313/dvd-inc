@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
     public void RemovePoints(float removed)
     {
         this.points -= removed;
+        this.points = (float) Math.Round(this.points, 2);
         this.pointsText.text = this.points + "";
 
         if (this.upgradesShop.gameObject.activeSelf)
@@ -155,6 +156,8 @@ public class GameManager : MonoBehaviour
     public void RemoveRebirthPoints(float rp)
     {
         this.rebirthPoints -= rp;
+        this.rebirthPoints = (float) Math.Round(this.rebirthPoints, 2);
+        this.rebirthPointsText.text = this.rebirthPoints + " RP";
     }
 
     public void IncreaseSpeed(float amount)
